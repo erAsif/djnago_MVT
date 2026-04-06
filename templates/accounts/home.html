@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #43e97b, #38f9d7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background: #43e97b;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 50px 10px 0 10px;
+        }
+
+        button:hover {
+            background: #2ecc71;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Welcome {{ user.username }}</h2>
+
+        <a href="{% url 'accounts:signup' %}">
+            <button>Signup</button>
+        </a>
+
+        <a href="{% url 'accounts:login' %}">
+            <button>Login</button>
+        </a>
+    </div>
+
+</body>
+
+</html>
